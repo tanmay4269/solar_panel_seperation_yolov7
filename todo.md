@@ -67,3 +67,33 @@ so all the frames are being saved, why?
 whats happening? 
 old and new not doing what they shld be doing
 what shld they be doing?
+
+video 1/1 (94/100) 
++++++++++++++++++++++++++++++++++++++++++ old: False, new: False
+========================================= old: False, new: True
+***************************************** old: False, new: True
+----------------------------------------- old: True, new: True
+video 1/1 (95/100) 
++++++++++++++++++++++++++++++++++++++++++ old: True, new: True
+***************************************** old: True, new: False
+----------------------------------------- old: False, new: False
+video 1/1 (96/100) 
++++++++++++++++++++++++++++++++++++++++++ old: False, new: False
+========================================= old: False, new: True
+***************************************** old: False, new: True
+----------------------------------------- old: True, new: True
+video 1/1 (97/100) 
++++++++++++++++++++++++++++++++++++++++++ old: True, new: True
+***************************************** old: True, new: False
+----------------------------------------- old: False, new: False
+video 1/1 (98/100) 
++++++++++++++++++++++++++++++++++++++++++ old: False, new: False
+========================================= old: False, new: True
+***************************************** old: False, new: True
+----------------------------------------- old: True, new: True
+
+for some reason after it has once stored the panel, the next time it sees it, it isnt detecting it
+why? 
+in_offset_new becomes false even when the panel is detectable, bruh
+maybe i shld break everytime in_offset_new is true
+

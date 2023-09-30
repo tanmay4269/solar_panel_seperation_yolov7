@@ -141,11 +141,11 @@ def detect(save_img=False):
                     _h = xywh[3]
 
                     # saves the solar panel img
-                    in_offset_new = (abs(_x - im_w/2) < im_w/8 and abs(_y - im_h/2) < im_h/3)
+                    in_offset_new = (abs(_x - im_w/2) < im_w/8) and (abs(_y - im_h/2) < im_h/3)
                     rising_edge_in_offset = (in_offset_old == False and in_offset_new == True)
 
                     if rising_edge_in_offset:
-                        print(f"============================================== old: {in_offset_old}, new: {in_offset_new}")
+                        print(f"========================================== old: {in_offset_old}, new: {in_offset_new}")
 
                         sp_img = im0[int(_y-_h/2):int(_y+_h/2), int(_x-_w/2):int(_x+_w/2)]
                         cv2.imwrite(f"{save_solar_panels_path}/sp{saved_solar_panels_count}.jpg", sp_img)
@@ -185,10 +185,11 @@ def detect(save_img=False):
                         cv2.imwrite(f"{save_full_img_path}/sp{saved_solar_panels_count}.jpg", im0)
                         saved_solar_panels_count += 1
 
-                        ########## ALERT ###########
+                    if in_offset_new:
                         break
         
                 #
+                print(f"***************************************** old: {in_offset_old}, new: {in_offset_new}")
                 in_offset_old = in_offset_new
                 print(f"----------------------------------------- old: {in_offset_old}, new: {in_offset_new}")
 
