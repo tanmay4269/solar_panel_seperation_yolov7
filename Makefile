@@ -8,7 +8,7 @@ detect_video:
 	rm -rf 1_save_full_img
 	mkdir 1_save_full_img
 
-	python3 detect.py --weights weights/best.pt --conf 0.25 --img-size 640 --source vids/vid3.2.mp4
+	python3 detect.py --weights weights/best.pt --conf 0.25 --img-size 640 --source vids/vid3.3.mp4
 
 base_detect:
 	python3 detect.py --weights weights/yolov7.pt --conf 0.25 --img-size 640 --source inference/images/row1.jpg
