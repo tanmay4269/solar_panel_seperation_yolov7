@@ -1,0 +1,5 @@
+train: train_data_2/train 
+val: train_data_2/valid
+
+nc: 1
+names: ['solar panel']

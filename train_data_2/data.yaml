@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['solar panel']
+
+roboflow:
+  workspace: tanmay-gejapati
+  project: solar-panel-detection-jgknt
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/tanmay-gejapati/solar-panel-detection-jgknt/dataset/2
